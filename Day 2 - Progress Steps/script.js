@@ -1,21 +1,49 @@
-// Obtener todos los elementos con la clase "panel" y almacenarlos en la variable "paneles"
-const paneles = document.querySelectorAll('.panel');
+const progreso = document.getElementById('progreso');
+const atras = document.getElementById('atras');
+const siguiente = document.getElementById('siguiente');
+const circulos = document.querySelectorAll('.circulo');
 
-// Función para eliminar la clase 'active' de todos los paneles
-function eliminarActividadClases(){
-    // Iterar a través de cada panel y eliminar la clase 'active'
-    paneles.forEach(panel => {
-        panel.classList.remove('active');
-    })
-}
+let activoActual = 1;
 
-// Agregar un manejador de eventos 'click' a cada panel
-paneles.forEach(panel => {
-    panel.addEventListener('click', () => {
-        // Llamar a la función para eliminar 'active' de todos los paneles
-        eliminarActividadClases();
-        // Agregar la clase 'active' al panel que fue clicado
-        panel.classList.add('active');
-    })
+siguiente.addEventListener('click', () => {
+        activoActual++;
+
+        if (activoActual > circulos.length) {
+            activoActual = circulos.length;
+        }
+
+        actualizar();
+    }
+)
+
+atras.addEventListener('click', () => {
+    activoActual--
+
+    if (activoActual < 1) {
+        activoActual = 1
+    }
+    actualizar()
 })
 
+function actualizar() {
+    circulos.forEach((circulo, idx) => {
+        if (idx < activoActual) {
+            circulo.classList.add('activo');
+        }else{
+            circulo.classList.remove('activo');
+        }
+    })
+
+    const activos = document.querySelectorAll('.activo');
+    
+    progreso.style.width = (activos.length -1) / (circulos.length - 1) * 100 + '%';
+
+    if (activoActual === 1) {
+        atras.disabled = true;
+    }else if (activoActual === circulos.length){
+        siguiente.disabled = true;
+    }else{
+        atras.disabled = false;
+        siguiente.disabled = false;
+    }
+}
