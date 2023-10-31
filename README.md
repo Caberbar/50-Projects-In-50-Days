@@ -1,4 +1,4 @@
-# 50-Projects-In-50-Days HTML, CSS &amp; Java Script
+# 50 Projects In 50 Days HTML, CSS &amp; Java Script
 
 This is the main repository for all of the projects in the course.
 
