@@ -77,7 +77,7 @@ h1{
 
 .split.derecha{
   left: 0;
-  background: url('1100339.jpg');
+  background: url('https://images7.alphacoders.com/110/1100339.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -92,7 +92,7 @@ h1{
 
 .split.izquierda{
   right: 0;
-  background: url('7481.jpg');
+  background: url('https://images.deliveryhero.io/image/fd-sk/Products/767044.jpg?width=%s');
   background-repeat: no-repeat;
   background-size: cover;
 }
