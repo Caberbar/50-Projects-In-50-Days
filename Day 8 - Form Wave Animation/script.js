@@ -1,9 +1,8 @@
-const derecha = document.querySelector('.derecha');
-const izquierda = document.querySelector('.izquierda');
-const contenedor = document.querySelector('.contenedor');
+const labels = document.querySelectorAll('.form-control label');
 
-derecha.addEventListener('mouseenter', () => contenedor.classList.add('hover-derecha'))
-derecha.addEventListener('mouseleave', () => contenedor.classList.remove('hover-derecha'))
-
-izquierda.addEventListener('mouseenter', () => contenedor.classList.add('hover-izquierda'))
-izquierda.addEventListener('mouseleave', () => contenedor.classList.remove('hover-izquierda'))
+labels.forEach(label => {
+    label.innerHTML = label.innerText
+    .split('')
+    .map((letter, idx) => `<span style="transition-delay:${idx * 20}ms">${letter}</span>`)
+    .join('');
+})
