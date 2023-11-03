@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #fff8f0;
+  background-color: #C6D8FF;
   font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ h3{
 }
 
 .btn{
-  background-color: #9f68e0;
+  background-color: #373E40;
   border: 0;
   border-radius: 10px;
   color: white;

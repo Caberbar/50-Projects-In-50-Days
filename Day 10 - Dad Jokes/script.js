@@ -1,25 +1,34 @@
-const sounds = ['bell','boom','duck','interface','punch','trap'];
+const jokeEl = document.getElementById('joke');
+const boton = document.getElementById('jokeBtn');
 
-sounds.forEach(sonido => {
-    const btn = document.createElement('button');
-    btn.classList.add('btn');
+boton.addEventListener('click',generarBroma);
 
-    btn.innerText= sonido;
+generarBroma();
 
-    btn.addEventListener('click', () => {
-        stopSonido();
+//Using async/await
+async function generarBroma() {
+    const config = {
+        headers: {
+            'Accept': 'application/json'
+        }
+    }
 
-        document.getElementById(sonido).play() //Activamos el sonido
-    })
+    const res = await fetch('https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single', config);
 
-    document.getElementById('buttons').appendChild(btn);
-});
 
-function stopSonido() {
-    sounds.forEach(sonido => {
-        const sond =   document.getElementById(sonido);
+    const data = await res.json();
 
-        sond.pause();
-        sond.currentTime = 0;
-    })
+    jokeEl.innerHTML = data.joke;
+
+//using .then()    
+    // const config = {
+    //     headers: {
+    //         'Accept': 'application/json'
+    //     }
+    // }
+
+    // fetch('https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single', config).then(res =>
+    // res.json()).then((data) => {
+    //     jokeEl.innerHTML = data.joke
+    // });
 }
