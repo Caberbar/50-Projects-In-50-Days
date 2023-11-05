@@ -17,3 +17,4 @@ This is the main repository for all of the projects in the course.
 | 09  | [Sound Board](https://github.com/Caberbar/50-Projects-In-50-Days/tree/main/Day%209%20-%20Sound-Board)        | [Live Demo](https://caberbar.github.io/Proyectos/50-Projects-In-50-Days/Day%209%20-%20Sound-Board/) |
 | 10  | [Dad Jokes](https://github.com/Caberbar/50-Projects-In-50-Days/tree/main/Day%2010%20-%20Dad%20Jokes)        | [Live Demo](https://caberbar.github.io/Proyectos/50-Projects-In-50-Days/Day%2010%20-%20Dad%20Jokes/) |
 | 11  | [Event KeyCodes](https://github.com/Caberbar/50-Projects-In-50-Days/tree/main/Day%2011%20-%20Event%20KeyCodes)        | [Live Demo](https://caberbar.github.io/Proyectos/50-Projects-In-50-Days/Day%2011%20-%20Event%20KeyCodes/) |
+| 12  | [FAQ Collapse](https://github.com/Caberbar/50-Projects-In-50-Days/tree/main/Day%2012%20-%20FAQ%20Collapse)        | [Live Demo](https://caberbar.github.io/Proyectos/50-Projects-In-50-Days/Day%2012%20-%20FAQ%20Collapse/) |
